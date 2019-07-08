@@ -1,0 +1,206 @@
+pydev debugger: process 36729 is connecting
+
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.people WHERE Key_name = 'PRIMARY'
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.batting WHERE Key_name = 'PRIMARY'
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.appearances WHERE Key_name = 'PRIMARY'
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.offices WHERE Key_name = 'PRIMARY'
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.fantasy_manager WHERE Key_name = 'PRIMARY'
+ * Serving Flask app "aeneid" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+pydev debugger: process 36732 is connecting
+
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.people WHERE Key_name = 'PRIMARY'
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.batting WHERE Key_name = 'PRIMARY'
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.appearances WHERE Key_name = 'PRIMARY'
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.offices WHERE Key_name = 'PRIMARY'
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.fantasy_manager WHERE Key_name = 'PRIMARY'
+ * Debugger is active!
+ * Debugger PIN: 337-417-774
+ *** DEBUG: Query =  select playerID,nameLast,nameFirst from HW1.people WHERE nameLast='Smith'  limit 10 offset 10
+127.0.0.1 - - [04/Mar/2019 17:47:21] "GET /api/HW1/people?nameLast=Smith&fields=playerID,nameLast,nameFirst&order_by=nameFirst&limit=10&offset=10 HTTP/1.1" 200 -
+ *** DEBUG: Query =  select playerID,nameLast,nameFirst from HW1.people WHERE nameLast='Smith'  limit 10 offset 10
+127.0.0.1 - - [04/Mar/2019 17:47:40] "GET /api/HW1/people?nameLast=Smith&fields=playerID,nameLast,nameFirst&order_by=nameFirst&limit=10&offset=10 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:47:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:47:54] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.fantasy_manager WHERE Key_name = 'PRIMARY'
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+ERROR:root:RDBDataTable._run_q: error = 
+Traceback (most recent call last):
+  File "/Users/wangxinquan/Desktop/2sem/W4111Database/HW2.version1/aeneid/dbservices/RDBDataTable.py", line 119, in _run_q
+    r = cursor.execute(q, args)  # Execute the query.
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'ok1' for key 'PRIMARY'")
+Insert Exception =  (1062, "Duplicate entry 'ok1' for key 'PRIMARY'")
+ERROR:root:RDBDataTable._run_insert exception
+Traceback (most recent call last):
+  File "/Users/wangxinquan/Desktop/2sem/W4111Database/HW2.version1/aeneid/dbservices/RDBDataTable.py", line 168, in _run_insert
+    result = self._run_q(q, args=values_list, fields=None, fetch=False, cnx=cnx, commit=True)
+  File "/Users/wangxinquan/Desktop/2sem/W4111Database/HW2.version1/aeneid/dbservices/RDBDataTable.py", line 135, in _run_q
+    raise e
+  File "/Users/wangxinquan/Desktop/2sem/W4111Database/HW2.version1/aeneid/dbservices/RDBDataTable.py", line 119, in _run_q
+    r = cursor.execute(q, args)  # Execute the query.
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/wangxinquan/.conda/envs/HW2.version1/lib/python3.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'ok1' for key 'PRIMARY'")
+127.0.0.1 - - [04/Mar/2019 17:47:54] "POST /api/HW1/fantasy_manager HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:47:54] "POST /api/HW1/fantasy_manager HTTP/1.1" 500 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:47:54] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:47:54] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:48:32] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:48:32] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 404 -
+127.0.0.1 - - [04/Mar/2019 17:49:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:49:02] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:02] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:49:02] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:02] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:49:02] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:02] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:49:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:49:17] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:17] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:49:17] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:17] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:49:17] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:17] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:49:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:36] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:49:36] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:36] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:49:36] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:36] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:49:36] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:49:36] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:50:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:50:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:50:09] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:50:09] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:50:09] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:50:09] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:50:09] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:50:09] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:51:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:51:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:51:25] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:51:25] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:51:25] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:51:25] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:51:25] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:51:25] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:51:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:51:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:51:41] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:51:41] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:51:41] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:51:41] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:51:41] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:51:41] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:52:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:52:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:52:02] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:52:02] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:52:02] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:52:02] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:52:02] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:52:02] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:52:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:52:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:52:11] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:52:11] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:52:11] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:52:11] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:52:11] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:52:11] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:53:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:53:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:53:16] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:53:16] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:53:16] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:53:16] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:53:16] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:53:16] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:55:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:55:36] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:55:36] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:55:36] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:55:36] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:55:36] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:55:36] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:55:36] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:58:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:58:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:58:02] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:58:02] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:58:02] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:58:02] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:58:02] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:58:02] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:58:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:58:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2019 17:58:27] "POST /explain/body HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:58:27] "POST /explain/body HTTP/1.1" 200 -
+ *** DEBUG: Query =  insert into HW1.fantasy_manager (id,last_name,first_name,email) values ( 'ok1','Obiwan','Kenobi','ow@jedi.org') 
+127.0.0.1 - - [04/Mar/2019 17:58:27] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:58:27] "POST /api/HW1/fantasy_manager HTTP/1.1" 201 -
+ *** DEBUG: Query =  delete from HW1.fantasy_manager WHERE id='ok1' 
+127.0.0.1 - - [04/Mar/2019 17:58:27] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2019 17:58:27] "DELETE /api/HW1/fantasy_manager/ok1 HTTP/1.1" 200 -

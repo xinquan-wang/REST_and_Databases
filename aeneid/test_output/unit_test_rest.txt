@@ -1,0 +1,55 @@
+ *** DEBUG: Query =  SHOW KEYS FROM HW1.fantasy_manager WHERE Key_name = 'PRIMARY'
+First REST API returned 
+            You probably want to go either to the content home page or call an API at /api.
+            When you despair during completing the homework, remember that
+            Audentes fortuna iuvat.
+            
+Result = 
+{
+  "YouSent": "Some JSON. Cool!",
+  "Note": "The cool kids use JSON.",
+  "YourJSONWas": {
+    "p": "cool"
+  }
+}
+
+test_create_manager: test 1, manager = \, {
+  "id": "ok1",
+  "last_name": "Obiwan",
+  "first_name": "Kenobi",
+  "email": "ow@jedi.org"
+}
+Printing a response.
+HTTP status code:  201
+Response headers: 
+ {
+  "Content-Type": "text/plain; charset=utf-8",
+  "Content-Length": "7",
+  "Server": "Werkzeug/0.14.1 Python/3.7.2",
+  "Date": "Mon, 04 Mar 2019 22:58:27 GMT"
+}
+Text body: 
+ CREATED
+
+test_create_manager: test 2 retrieving created manager.
+No link header returned.
+
+test_delete_manager: manager = \,
+Printing a response.
+HTTP status code:  200
+Response headers: 
+ {
+  "Content-Type": "text/plain; charset=utf-8",
+  "Content-Length": "2",
+  "Server": "Werkzeug/0.14.1 Python/3.7.2",
+  "Date": "Mon, 04 Mar 2019 22:58:27 GMT"
+}
+Text body: 
+ OK
+After deleting manager with id 'ok1'
+----  -------  --------  -----------------
+13    Jabba    Hutt      jh@tatoine.pl
+9     Douglas  Ferguson  dff9@columbia.edu
+df9   Douglas  Ferguson  dff9@columbia.edu
+dff9  Douglas  Ferguson  dff9@columbia.edu
+----  -------  --------  -----------------

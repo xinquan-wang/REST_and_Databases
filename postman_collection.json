@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "0da68f3f-d765-48df-8dc9-5ff58dc5981d",
+		"name": "HW2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/api/HW1/people?nameLast=Smith&fields=playerID,nameLast,nameFirst&order_by=nameFirst&limit=10&offset=10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/HW1/people?nameLast=Smith&fields=playerID,nameLast,nameFirst&order_by=nameFirst&limit=10&offset=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"HW1",
+						"people"
+					],
+					"query": [
+						{
+							"key": "nameLast",
+							"value": "Smith"
+						},
+						{
+							"key": "fields",
+							"value": "playerID,nameLast,nameFirst"
+						},
+						{
+							"key": "order_by",
+							"value": "nameFirst"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/explain/body",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"param1\": \"cool\", \n\t\"param2\": \"Not so much\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/explain/body",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"explain",
+						"body"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/api/HW1/people/willite01?fields=playerID,nameLast,bats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/HW1/people/willite01?fields=playerID,nameLast,bats",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"HW1",
+						"people",
+						"willite01"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "playerID,nameLast,bats"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/api/HW1/batting?teamId=BOS&yearId=2004",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/HW1/batting?teamId=BOS&yearId=2004",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"HW1",
+						"batting"
+					],
+					"query": [
+						{
+							"key": "teamId",
+							"value": "BOS"
+						},
+						{
+							"key": "yearId",
+							"value": "2004"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/api/HW1/batting?teamID=BOS&limit=10&offset=0&fields=playerID,yearID,H,AB,RBI&order_by=RBI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/HW1/batting?teamID=BOS&limit=10&offset=0&fields=playerID,yearID,H,AB,RBI&order_by=RBI",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"HW1",
+						"batting"
+					],
+					"query": [
+						{
+							"key": "teamID",
+							"value": "BOS"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "fields",
+							"value": "playerID,yearID,H,AB,RBI"
+						},
+						{
+							"key": "order_by",
+							"value": "RBI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/api/HW1/people?nameLast=Smith&fields=playerID,nameLast,nameFirst&order_by=nameFirst&limit=10&offset=10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/HW1/people?nameLast=Smith&fields=playerID,nameLast,nameFirst&order_by=nameFirst&limit=10&offset=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"HW1",
+						"people"
+					],
+					"query": [
+						{
+							"key": "nameLast",
+							"value": "Smith"
+						},
+						{
+							"key": "fields",
+							"value": "playerID,nameLast,nameFirst"
+						},
+						{
+							"key": "order_by",
+							"value": "nameFirst"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/api/HW1/offices/13",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/HW1/offices/13",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"HW1",
+						"offices",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/api/HW1/fantasy_manager",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"13\",\n\t\"last_name\": \"Hutt\",\n\t\"first_name\": \"Jabba\",\n\t\"email\": \"jh@tatoine.pl\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/HW1/fantasy_manager",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"HW1",
+						"fantasy_manager"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/api/HW1/fantasy_manager/10",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/HW1/fantasy_manager/10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"HW1",
+						"fantasy_manager",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
