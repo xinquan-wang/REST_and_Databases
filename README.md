@@ -13,5 +13,6 @@ Test the queries via POSTMAN using methods:
 - GET/POST
 - DELETE
 - Responses
+
 Understood how to surface data sources and applications via the web.
 
